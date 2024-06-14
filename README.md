@@ -19,26 +19,27 @@ Affichage du Hash : Le hash MD5 calculé est converti en hexadécimal et affich�
 
 
 # Explication du Code
-Section .data
+
+Section .data :
 Contient les valeurs initiales, le padding et les constantes nécessaires pour l'algorithme MD5.
 
-Section .bss
+Section .bss :
 Déclare les buffers et variables nécessaires pour le calcul du hash.
 
-Section .text
+Section .text :
 Contient le code principal du programme, y compris l'initialisation, le padding, la transformation MD5 et l'affichage du hash.
 
-_start
+_start :
 Point d'entrée principal du programme. Initialise le contexte MD5, charge un exemple de message, effectue le padding, appelle la transformation MD5 et affiche le hash.
 
-md5_transform
+md5_transform :
 Effectue les transformations MD5 sur les blocs de message.
 
-md5_decode
+md5_decode :
 Convertit les 64 octets du message en mots de 32 bits.
 
-print_hash
+print_hash :
 Convertit et affiche l'état MD5 (A, B, C, D) en hexadécimal.
 
-print_hex
+print_hex :
 Convertit une valeur en hexadécimal et l'affiche.
